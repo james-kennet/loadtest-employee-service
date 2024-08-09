@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "0b5dc9a0-7c92-4220-b8c3-c4bd28419832",
+		"name": "Mongo/MySQL performance",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5775600"
+	},
+	"item": [
+		{
+			"name": "Mongo 10M employee records insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8093/api/mongodb/concurrentInsertEmployees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"mongodb",
+						"concurrentInsertEmployees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mongo employee/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8093/api/mongodb/1748971",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"mongodb",
+						"1748971"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mongo employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"James\",\n    \"lastName\": \"Bond\",\n    \"age\": 99,\n    \"email\": \"test@gmail.com\",\n    \"occupation\": \"Tester\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8093/api/mongodb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"mongodb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mongo employee/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8093/api/mongodb/name/Jane?page=400&size=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"mongodb",
+						"name",
+						"Jane"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "400"
+						},
+						{
+							"key": "size",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MySQL 10M employee records insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8093/api/mysql/concurrentInsertEmployees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"mysql",
+						"concurrentInsertEmployees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MySQL employee/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8093/api/mysql/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"mysql",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MySQL employee/name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8093/api/mysql/name/Jane?page=10&size=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"mysql",
+						"name",
+						"Jane"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "10"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MySQL employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"James\",\n    \"lastName\": \"Bond\",\n    \"age\": 99,\n    \"email\": \"test@gmail.com\",\n    \"occupation\": \"Tester\",\n    \"created_by\": \"King Pin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8093/api/mysql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"mysql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actuator",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8093/actuator/prometheus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"actuator",
+						"prometheus"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
