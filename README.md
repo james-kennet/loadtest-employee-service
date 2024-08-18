@@ -17,8 +17,8 @@
 |                   |                  | N/A                         | /api/mongodb/name/{firstName} | 2,000            | 35.2s                | -                             | 0             |
 | MySQL             | 10,000,000       | N                           | /api/mysql/{id}               | 2,000            | 88.2s                | 181.5s                        | 56            |
 |                   |                  | N                           | /api/mysql/name/{firstName}   | 1,944            | 277.4s               | -                             | 306           |
-| MySQL(fine tuned) | 10,000,000       | Y - max_connections=1000    | /api/mysql/{id}               | 2,000            | 32.4s                | 235.5s                        | 0             |
-|                   |                  | Y - max_connections=1000    | /api/mysql/name/{firstName}   | 2,000            | 438.7s               | -                             | 0             |
+| MySQL(fine tuned) | 10,000,000       | Y - max_connections=1000    | /api/mysql/{id}               | 2,000            | 56.2s                | 111s                          | 0             |
+|                   |                  | Y - max_connections=1000    | /api/mysql/name/{firstName}   | 2,000            | 165.9s               | -                             | 0             |
 | Cassandra         | To do            |                             |                               |                  |                      |                               |               |
 | PostgeSQL         | To do            |                             |                               |                  |                      |                               |               |
 
